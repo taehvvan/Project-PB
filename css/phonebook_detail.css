@@ -1,0 +1,322 @@
+    
+    
+    /* 모바일용 */
+    @media (max-width: 767px) {
+
+        .navbar, .main-bg {
+            display: none;
+        }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 398px;
+            height: 844px;
+            margin: 0 auto;
+            background-color: #efe3e3;
+            padding-bottom: 70px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .container .clock {
+            background-color: white;
+            border-bottom: 1px solid black;
+            padding: 3px 0;
+        }
+        .top-bar {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .profile-section {
+            text-align: center;
+            padding: 20px 15px;
+        }
+        .profile-pic {
+            width: 127px;
+            height: 127px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .card {
+            background-color: #f4f1f1;
+            margin: 10px 15px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        .card span {
+            color: #ff914d;
+        }
+        #editName, #editPhone, #editGroup, #editBirthday, #editEmail {
+            border: none;
+            border-bottom: 1px solid orange;
+            background-color: #efe3e3;
+            height: 40px;
+        }
+        
+        .editCard {
+            margin: 10px 15px;
+            border-radius: 10px;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .editCard > .editCard-content {
+            display: flex; 
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .editButton {
+            position: absolute; 
+            bottom: 50px;
+            width: 330px;
+            height: 50px;
+            background-color: rgb(255, 122, 122);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        /* 삭제버튼 관련 delbtn까지*/
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-box {
+    background: white;
+    padding: 10px;
+    padding-top: 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    max-width: 300px;
+    min-height: 250px;
+}
+
+.confirm-box strong{
+    font-size: 30px;
+}
+.confirm-box p{
+    padding-top: 40px;
+}
+
+.confirm-box button {
+    margin: 10px;
+}
+.delbtn{
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+    font-size: 22px;
+}
+
+        
+  }
+  
+  /* 데스크탑용 */
+  @media (min-width: 768px) {
+    .container {
+        display: none;
+    }
+    body {
+        font-family: 'Rubik', Arial, sans-serif;
+        background: #f5e6e6;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar {
+        width: 100vw;
+        height: 72px;
+        background: #fff;
+        box-shadow: 0 2px 16px rgba(240,149,149,0.10);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 0 48px;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #F09595;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+      .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .clock {
+        font-size: 1.1rem;
+        color: #F09595;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 6px rgba(240,149,149,0.10);
+      }
+      
+      .main-bg {
+        min-height: calc(100vh - 72px);
+        background: #f5e6e6;
+        padding: 0;
+      }
+      
+      .detail-section {
+        max-width: 650px;
+        margin: 48px auto 0 auto;
+        padding: 0 0 48px 0;
+      }
+      
+      .detail-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 6px 32px rgba(240,149,149,0.13);
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        padding: 48px 40px;
+        min-height: 340px;
+      }
+      
+      .detail-img-wrap {
+        flex-shrink: 0;
+      }
+      .detail-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 18px;
+        object-fit: cover;
+        border: 2px solid #f5e6e6;
+        box-shadow: 0 1px 8px rgba(240,149,149,0.13);
+        background: #f5e6e6;
+      }
+      
+      .detail-info {
+        flex: 1;
+        min-width: 0;
+      }
+      
+      .detail-name {
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin: 0 0 24px 0;
+        color: #F09595;
+        letter-spacing: 1px;
+      }
+      
+      .detail-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        font-size: 1.08rem;
+        gap: 20px;
+      }
+      .detail-label {
+        width: 110px;
+        color: #e47a7a;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .detail-value {
+        color: #222;
+        font-weight: 500;
+        word-break: break-all;
+      }
+      
+      .detail-actions {
+        margin-top: 32px;
+        display: flex;
+        gap: 18px;
+      }
+      
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 1.07rem;
+        padding: 10px 22px;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+      }
+      .btn-back {
+        background: #f5e6e6;
+        color: #F09595;
+        border: 1.5px solid #F09595;
+      }
+      .btn-back:hover {
+        background: #ffeaea;
+      }
+      .btn-edit {
+        background: #F09595;
+        color: #fff;
+        border: 1.5px solid #F09595;
+      }
+      .btn-edit:hover {
+        background: #e47a7a;
+        color: #fff;
+      }
+      .btn-delete {
+        background: #fff;
+        color: #F09595;
+        border: 1.5px solid #F09595;
+      }
+      .btn-delete:hover {
+        background: #F09595;
+        color: #fff;
+      }
+      
+
+      
+  
+      @media (max-width: 1300px) {
+          .phonebook-section, .phonebook-table-wrap {
+              max-width: 98vw;
+          }
+      }
+  }

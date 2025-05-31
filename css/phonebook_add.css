@@ -1,0 +1,358 @@
+@media (max-width: 767px) {
+    .navbar, .main-bg {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #000000;
+    }
+    .container {
+        max-width: 398px;
+        height: 844px;
+        margin: 0 auto;
+        background-color: #efe3e3;
+        padding-bottom: 70px;
+        border: 2px solid black;
+        position: relative;
+    }
+    .container .clock {
+        background-color: white;
+        border-bottom: 1px solid black;
+        padding: 3px 0;
+    }
+    .top-bar {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        background-color: white;
+        border-bottom: 1px solid #ccc;
+    }
+    .btn {
+          background: none;
+          border: none;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          color: #000;
+    }
+    .save {
+          color: #7a4fff;
+    }
+    .top-bar h2 {
+        margin: 0;
+        font-weight: bold;
+    }
+    .profile {
+          display: flex;
+          justify-content: center;
+          margin: 60px 0;
+    }
+    .profile img {
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        background-color: #ddd;
+    }
+    .group{
+        margin: 10px 15px;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form-group {
+        margin-bottom: 30px;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input, select {
+        width: 60%;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid orange;
+        background-color: transparent;
+        outline: none;
+    }
+    .name {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    .card {
+        background-color: #f4f1f1;
+        margin: 10px 15px;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+    }
+    .card span {
+        color: #ff914d;
+    }
+    #editName, #editPhone, #editGroup, #editBirthday, #editEmail {
+        border: none;
+        border-bottom: 1px solid orange;
+        background-color: #efe3e3;
+        height: 40px;
+    }
+    
+    .editCard {
+        margin: 10px 15px;
+        border-radius: 10px;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+    }
+    
+    .editCard > .editCard-content {
+        display: flex; 
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
+    .editButton,
+    .addButton {
+        position: absolute; 
+        bottom: 50px;
+        width: 330px;
+        height: 50px;
+        background-color: rgb(255, 122, 122);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: none;
+    }
+
+    body {
+        font-family: 'Rubik', Arial, sans-serif;
+        background: #f5e6e6;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar {
+        width: 100vw;
+        height: 72px;
+        background: #fff;
+        box-shadow: 0 2px 16px rgba(240,149,149,0.10);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 0 48px;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #F09595;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+      .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .clock {
+        font-size: 1.1rem;
+        color: #F09595;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 6px rgba(240,149,149,0.10);
+      }
+      
+      .main-bg {
+        min-height: calc(100vh - 72px);
+        background: #f5e6e6;
+        padding: 0;
+      }
+      
+      .add-section {
+        max-width: 650px;
+        margin: 48px auto 0 auto;
+        padding: 0 0 48px 0;
+      }
+      
+      .add-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 6px 32px rgba(240,149,149,0.13);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: stretch;
+        padding: 48px 40px;
+      }
+      
+      .add-img-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+      .profile-img-label {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+      }
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #f5e6e6;
+        border: 2px solid #f5e6e6;
+        box-shadow: 0 1px 8px rgba(240,149,149,0.13);
+        display: block;
+      }
+      .profile-img-overlay {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #F09595;
+        color: #F09595;
+        font-size: 1.2rem;
+        box-shadow: 0 1px 4px rgba(240,149,149,0.10);
+      }
+      
+      .add-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      
+      .add-field {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      
+      .add-field label {
+        color: #e47a7a;
+        font-weight: 600;
+        font-size: 1.04rem;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      
+      .add-field input,
+      .add-field select {
+        font-family: 'Rubik', Arial, sans-serif;
+        font-size: 1.08rem;
+        padding: 10px 12px;
+        border: 1.5px solid #f5e6e6;
+        border-radius: 7px;
+        background: #fff7f7;
+        color: #222;
+        transition: border 0.2s;
+        outline: none;
+      }
+      .add-field input:focus,
+      .add-field select:focus {
+        border: 1.5px solid #F09595;
+        background: #fff;
+      }
+      .add-field select {
+        appearance: none;
+      }
+      
+      .add-actions {
+        margin-top: 38px;
+        display: flex;
+        gap: 18px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 1.07rem;
+        padding: 10px 22px;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+      }
+      .btn-back {
+        background: #f5e6e6;
+        color: #F09595;
+        border: 1.5px solid #F09595;
+      }
+      .btn-back:hover {
+        background: #ffeaea;
+      }
+      .btn-save {
+        background: #F09595;
+        color: #fff;
+        border: 1.5px solid #F09595;
+      }
+      .btn-save:hover {
+        background: #e47a7a;
+        color: #fff;
+      }
+      
+      @media (max-width: 900px) {
+        .add-card {
+          padding: 32px 18px;
+          gap: 24px;
+        }
+        .add-section {
+          max-width: 98vw;
+          padding: 0 0 32px 0;
+        }
+      }
+          
+
+    @media (max-width: 1300px) {
+        .phonebook-section, .phonebook-table-wrap {
+            max-width: 98vw;
+        }
+    }
+}
+
+
