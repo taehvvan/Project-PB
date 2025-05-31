@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phonebook.css" />
+  
+</head>
+<body>
+    <!-- 모바일용 화면 -->
+    <div class="container">
+        <div class="clock">
+          <span class="clock" style="color: black;">clock</span>
+        </div>
+        
+        <div class="status-bar">
+          
+          <a href="phonebook_add.html" class="add">+</a>
+        </div>
+        <!-- 헤더 -->
+        <div class="header">
+          <h1>Phone Book</h1>
+        </div>
+        <!-- 내 프로필 -->
+        <div class="my-profile">
+          <span>My profile</span>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <!-- 연락처 리스트 -->
+        <ul class="contacts" id="mobile-contacts">
+          <!-- 자바스크립트로 렌더링 -->
+        </ul>
+    </div>
+
+
+    <!-- 웹용 화면 -->
+    <nav class="navbar">
+        <div class="navbar-left">
+          <div class="logo"><i class="fa fa-address-book"></i> Phone Book</div>
+        </div>
+        <div class="navbar-center">
+          <input type="text" id="search" class="search-input" placeholder="이름 또는 번호로 검색">
+        </div>
+        <div class="navbar-right">
+          <div class="clock" id="clock">00:00</div>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="My Profile">
+          </div>
+        </div>
+    </nav>
+    <main class="main-bg">
+        <section class="phonebook-section">
+          <div class="toolbar">
+            <button class="add-btn" title="Add Contact">
+              <a href="phonebook_add.html"><i class="fa fa-plus"></i> 새 연락처 </a>
+            </button>
+          </div>
+          <div class="phonebook-table-wrap">
+            <table class="phonebook-table">
+              <thead>
+                <tr>
+                  <th>사진</th>
+                  <th>이름</th>
+                  <th>전화번호</th>
+                  <th>전화</th>
+                </tr>
+              </thead>
+              <tbody id="web-contacts"></tbody>
+            </table>
+          </div>
+        </section>
+    </main>
+
+  <script src="phonebook.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Profile</title>
+  <script src="https://kit.fontawesome.com/c577a5c707.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="phonebook_edit.css">
+</head>
+<body>
+  <!-- 모바일용 -->
+  <div class="container" style="position: relative">
+    <div class="clock">
+      <span id="clock" class="clock" style="color: black;">clock</span>
+    </div>
+    <div class="top-bar" style="justify-content: space-between;">
+      <div>
+        <a id="mobilePreviousBtn"><i class="fa-solid fa-arrow-left"></i></a>
+     </div>
+    <div>
+    <h1>Edit Contact</h1>
+    </div>
+  </div>
+
+  <div class="profile-section">
+    <img src="${contact.img}" alt="Profile Picture" class="profile-pic" id="mobile-img"/>
+    <div class="name"><span id="name"></span></div>
+  </div>
+
+  <div class="group">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="mobile-name" type="text" placeholder="Enter name" />
+    </div>
+    <div class="form-group">
+        <label for="number">Number</label>
+        <input id="mobile-number" type="text" placeholder="Enter number" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="mobile-email" type="text" placeholder="Enter email" />
+    </div>
+    <div class="form-group">
+        <label for="tag">Tags</label>
+        <select id="mobile-tag">
+            <option value="Family">가족</option>
+            <option value="Friend">친구</option>
+            <option value="Work">직장</option>
+            <option value="Etc">기타</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="birthday">Birthday</label>
+        <input id="mobile-birthday" type="date" />
+    </div>
+    <input type="submit" value="SAVE" class="editButton" id="saveBtn">
+  </div>
+</div>
+
+<!-- 웹용 -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="phonebook.html" class="logo"><i class="fa fa-address-book"></i> Phone Book</a>
+  </div>
+  <div class="navbar-center"></div>
+  <div class="navbar-right">
+    <div class="clock" id="clock">00:00</div>
+    <div class="profile">
+      <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="My Profile" id="img">
+    </div>
+  </div>
+</nav>
+<main class="main-bg">
+  <section class="edit-section">
+    <form class="edit-card">
+      <div class="edit-img-wrap">
+        <img id="web-img" class="edit-img" src="" alt="프로필 이미지">
+      </div>
+      <div class="edit-fields">
+        <div class="edit-field">
+          <label for="editName"><i class="fa fa-user"></i> 이름</label>
+          <input type="text" id="editName" name="editName" required>
+        </div>
+        <div class="edit-field">
+          <label for="editPhone"><i class="fa fa-phone"></i> 전화번호</label>
+          <input type="text" id="editPhone" name="editPhone" required>
+        </div>
+        <div class="edit-field">
+          <label for="editGroup"><i class="fa fa-users"></i> 그룹</label>
+          <select id="editGroup" name="editGroup">
+            <option value="">선택하세요</option>
+            <option value="가족">가족</option>
+            <option value="친구">친구</option>
+            <option value="직장">직장</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+        <div class="edit-field">
+          <label for="editBirthday"><i class="fa fa-birthday-cake"></i> 생일</label>
+          <input type="date" id="editBirthday" name="editBirthday">
+        </div>
+        <div class="edit-field">
+          <label for="editEmail"><i class="fa fa-envelope"></i> 이메일</label>
+          <input type="email" id="editEmail" name="editEmail">
+        </div>
+      </div>
+      <div class="edit-actions">
+        <a id="webPreviousBtn" href="#" class="btn btn-back"><i class="fa fa-arrow-left"></i> 취소</a>
+        <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> 저장</button>
+      </div>
+    </form>
+  </section>
+</main>
+  <script src="phonebook_edit.js"></script>
+</body>
+</html>

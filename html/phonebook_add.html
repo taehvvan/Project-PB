@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c577a5c707.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="phonebook_add.css">
+</head>
+<body>
+    <!-- 모바일용 -->
+    <div class="container" style="position: relative">
+        <div class="clock">
+            <span id="clock" style="color: black;">clock</span>
+        </div>
+        <div class="top-bar" style="justify-content: space-between;">
+            <a id="previousBtn"><i id="edit" class="fa-solid fa-arrow-left" style="font-size: 25px; margin-right: 20px; color: black;"></i></a>
+            <h2>Add Contact</h2>
+        </div>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="profile" />
+        </div>
+
+        <form class="group">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="mobileAddName" type="text" placeholder="Enter name" />
+            </div>
+            <div class="form-group">
+                <label for="number">Number</label>
+                <input id="mobileAddPhone" type="text" placeholder="Enter number" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="mobileAddEmail" type="text" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+                <label for="tag">Tags</label>
+                <select id="mobileAddGroup">
+                    <option value="Family">Family</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Work">Work</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input id="mobileAddBirthday" type="date" />
+            </div>
+            <input type="submit" value="SAVE" class="addButton" id="saveBtn">
+          </form>
+    </div>
+
+    <!-- 웹용 -->
+    <nav class="navbar">
+        <div class="navbar-left">
+          <a href="phonebook.html" class="logo"><i class="fa fa-address-book"></i> Phone Book</a>
+        </div>
+        <div class="navbar-center"></div>
+        <div class="navbar-right">
+          <div class="clock" id="clock">00:00</div>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="My Profile">
+          </div>
+        </div>
+      </nav>
+      <main class="main-bg">
+        <section class="add-section">
+          <form class="add-card" enctype="multipart/form-data">
+            <div class="add-img-wrap">
+              <label for="addImg" class="profile-img-label">
+                <img id="profilePreview" class="profile-img" >
+                <div class="profile-img-overlay">
+                  <i class="fa fa-camera"></i>
+                </div>
+              </label>
+              <input type="file" id="addImg" accept="image/*" style="display:none;">
+            </div>
+            <div class="add-fields">
+              <div class="add-field">
+                <label for="addName"><i class="fa fa-user"></i> 이름</label>
+                <input type="text" id="addName" name="addName" required>
+              </div>
+              <div class="add-field">
+                <label for="addPhone"><i class="fa fa-phone"></i> 전화번호</label>
+                <input type="text" id="addPhone" name="addPhone" required>
+              </div>
+              <div class="add-field">
+                <label for="addGroup"><i class="fa fa-users"></i> 그룹</label>
+                <select id="addGroup" name="addGroup">
+                  <option value="">선택하세요</option>
+                  <option value="가족">가족</option>
+                  <option value="친구">친구</option>
+                  <option value="직장">직장</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+              <div class="add-field">
+                <label for="addBirthday"><i class="fa fa-birthday-cake"></i> 생일</label>
+                <input type="date" id="addBirthday" name="addBirthday">
+              </div>
+              <div class="add-field">
+                <label for="addEmail"><i class="fa fa-envelope"></i> 이메일</label>
+                <input type="email" id="addEmail" name="addEmail">
+              </div>
+            </div>
+            <div class="add-actions">
+              <a href="phonebook.html" class="btn btn-back"><i class="fa fa-arrow-left"></i> 취소</a>
+              <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> 저장</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    <script src="phonebook_add.js"></script>
+</body>
+</html>
